@@ -5,11 +5,30 @@ The JavaFX Maven Plugin provides a way to assemble distribution bundles for Java
  
 For information about this plugin including licencing information and how to configure your POM, please refer to the main wiki page: 
 
-* [http://zenjava.com/javafx/maven/](http://zenjava.com/javafx/maven/)
+* [http://pgkaila.github.io/javafx-maven-plugin](http://pgkaila.github.io/javafx-maven-plugin/)
+* [http://zenjava.com/javafx/maven/(out dated)](http://zenjava.com/javafx/maven/)
 
+
+##How-To
+
+To use JavaFX Maven Plugin in your javafx project you need to include following maven plugin
+
+        <plugin>
+            <groupId>com.zenjava</groupId>
+            <artifactId>javafx-maven-plugin</artifactId>
+            <version>8.1.2</version>
+            <configuration>
+                <mainClass>${app.main.class}</mainClass>
+                <vendor>Vendor Name</vendor>
+            </configuration>
+        </plugin>
+        
+Then to build native installer execute `mvn clean jfx:native`
 
 Release Notes
 ================
+
+Version 8.1.2 (4-Sep-2014)
 
 Version 2.0 (1-Jul-2013)
 
